@@ -1,4 +1,4 @@
-package main.java.com.vp.springboot.model;
+package com.vp.springboot.model;
 
 import com.vp.springboot.model.Person;
 
