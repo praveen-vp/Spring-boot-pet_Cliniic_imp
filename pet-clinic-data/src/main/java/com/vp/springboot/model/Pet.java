@@ -1,8 +1,8 @@
 package com.vp.springboot.model;
 
 import java.time.LocalDate;
-
 import com.vp.springboot.model.Owner;
+import com.vp.springboot.model.PetType;
 
 public class Pet {
 
