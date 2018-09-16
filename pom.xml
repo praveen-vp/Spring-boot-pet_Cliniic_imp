@@ -4,7 +4,7 @@
 
 	<groupId>com.vp.springboot</groupId>
 	<artifactId>petclinic</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<modules>
 		<module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
@@ -39,6 +39,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<configuration>
 					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
 		</plugins>
