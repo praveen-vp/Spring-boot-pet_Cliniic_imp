@@ -43,7 +43,7 @@ public class PetServiceMap extends AbstractService<Pet, Long> implements CrudSer
 	@Override
 	public Pet Save(Pet object) {
 
-		super.save(object.getId(), object);
+		super.save(object);
 		return object;
 	}
 

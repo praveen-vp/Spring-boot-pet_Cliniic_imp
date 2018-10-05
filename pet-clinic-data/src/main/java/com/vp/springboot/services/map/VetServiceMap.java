@@ -6,11 +6,8 @@
 package com.vp.springboot.services.map;
 
 import java.util.Set;
-
 import org.springframework.stereotype.Service;
-
 import com.vp.springboot.model.Vet;
-import com.vp.springboot.services.CrudService;
 import com.vp.springboot.services.VetService;
 
 /**
@@ -47,7 +44,7 @@ public class VetServiceMap extends AbstractService<Vet, Long> implements VetServ
 	@Override
 	public Vet Save(Vet object) {
 
-		super.save(object.getId(), object);
+		super.save(object);
 		return object;
 	}
 

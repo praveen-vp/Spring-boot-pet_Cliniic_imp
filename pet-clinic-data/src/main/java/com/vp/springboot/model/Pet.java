@@ -4,20 +4,11 @@ import java.time.LocalDate;
 import com.vp.springboot.model.Owner;
 import com.vp.springboot.model.PetType;
 
-public class Pet {
+public class Pet extends BaseEntity {
 
-	private Long id;
 	private PetType petType;
 	private Owner owner;
 	private LocalDate birthDate;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	/**
 	 * @return the petType

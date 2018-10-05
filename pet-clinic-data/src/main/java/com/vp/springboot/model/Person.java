@@ -1,20 +1,9 @@
 package com.vp.springboot.model;
 
-public class Person {
+public class Person extends BaseEntity {
 
 	private String firstName;
 	private String lastName;
-	Long id;
-
-	public Long getId() {
-		return id;
-	}
-
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 
 	/**
 	 * @return the firstName

@@ -6,12 +6,8 @@
 package com.vp.springboot.services.map;
 
 import java.util.Set;
-
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
 import com.vp.springboot.model.Owner;
-import com.vp.springboot.services.CrudService;
 import com.vp.springboot.services.OwnerServices;
 
 /**
@@ -50,7 +46,7 @@ public class OwnerServiceMap extends AbstractService<Owner, Long> implements Own
 	public Owner Save(Owner object) {
 		
 		System.out.println("save method called --");
-		super.save(object.getId(), object);
+		super.save(object);
 		return object;
 	}
 
