@@ -7,18 +7,24 @@ package com.vp.springboot.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import com.vp.springboot.model.Owner;
 import com.vp.springboot.services.CrudService;
+import com.vp.springboot.services.OwnerServices;
 
 /**
  * @author praveen-vp 16-Sep-2018
  *
  */
-public class OwnerServiceMap extends AbstractService<Owner, Long> implements CrudService<Owner, Long> {
+@Service
+public class OwnerServiceMap extends AbstractService<Owner, Long> implements OwnerServices {
 
 	@Override
 	public Set<Owner> findAll() {
 		// TODO Auto-generated method stub
+		System.out.println("Calling load all ---- ");
 		return super.findAll();
 	}
 
@@ -42,9 +48,16 @@ public class OwnerServiceMap extends AbstractService<Owner, Long> implements Cru
 
 	@Override
 	public Owner Save(Owner object) {
-
+		
+		System.out.println("save method called --");
 		super.save(object.getId(), object);
 		return object;
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

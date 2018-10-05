@@ -20,6 +20,7 @@ public abstract class AbstractService<T, ID> {
 	protected Map<ID, T> map = new HashMap<>();
 
 	Set<T> findAll() {
+		System.out.println(map);
 		return new HashSet<>(map.values());
 	}
 
@@ -28,7 +29,9 @@ public abstract class AbstractService<T, ID> {
 	}
 
 	T save(ID id, T object) {
+		
 		map.put(id, object);
+		System.out.println(map);
 		return object;
 	}
 

@@ -1,17 +1,17 @@
 package com.vp.springboot.controller;
 
-import com.vp.springboot.services.OwnerServices;
+import com.vp.springboot.services.map.OwnerServiceMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("owmers")
+@RequestMapping("owners")
 @Controller
 public class OwnerController {
 
-    private final OwnerServices ownerServices;
+    private final OwnerServiceMap ownerServices;
 
-    public OwnerController(OwnerServices ownerServices) {
+    public OwnerController(OwnerServiceMap ownerServices) {
         this.ownerServices = ownerServices;
     }
 

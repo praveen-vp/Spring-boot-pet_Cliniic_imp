@@ -5,6 +5,8 @@
  */
 package com.vp.springboot.services;
 
+import org.springframework.stereotype.Service;
+
 import com.vp.springboot.model.Owner;
 
 /**
