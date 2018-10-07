@@ -1,11 +1,19 @@
 package com.vp.springboot.model;
 
+import java.util.Set;
+
 import com.vp.springboot.model.Person;
 
 public class Owner extends Person {
 
-	public Owner() {
-		// TODO Auto-generated constructor stub
+	private Set<Pet> pets;
+
+	public Set<Pet> getPets() {
+		return pets;
+	}
+
+	public void setPets(Set<Pet> pets) {
+		this.pets = pets;
 	}
 
 }
