@@ -7,14 +7,16 @@ package com.vp.springboot.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
 import com.vp.springboot.model.Pet;
-import com.vp.springboot.services.CrudService;
+import com.vp.springboot.services.PetService;
 
 /**
  * @author praveen-vp 16-Sep-2018
  *
  */
-public class PetServiceMap extends AbstractService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
