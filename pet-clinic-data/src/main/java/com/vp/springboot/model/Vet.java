@@ -1,9 +1,17 @@
 package com.vp.springboot.model;
 
+import java.util.Set;
+
 public class Vet extends Person {
 
-	public Vet() {
-		// TODO Auto-generated constructor stub
+	private Set<Speciality> specialities;
+
+	public Set<Speciality> getSpecialities() {
+		return specialities;
 	}
 
+	public void setSpecialities(Set<Speciality> specialities) {
+		this.specialities = specialities;
+	}
+	
 }
