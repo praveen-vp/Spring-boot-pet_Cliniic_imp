@@ -1,41 +1,50 @@
 package com.vp.springboot.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "visits")
 public class Visit extends BaseEntity {
 
-	LocalDate date;
-	String description;
-	Pet pet;
+    @Column(name = "date")
+    LocalDate date;
 
-	public Visit(LocalDate localDate, String description, Pet pet) {
-		this.date = localDate;
-		this.description = description;
-		this.pet = pet;
-	}
+    @Column(name = "description")
+    String description;
 
-	public LocalDate getDate() {
-		return date;
-	}
+    @ManyToOne
+    @JoinColumn(name = "pet_id")
+    Pet pet;
 
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
+    public Visit(LocalDate localDate, String description, Pet pet) {
+        this.date = localDate;
+        this.description = description;
+        this.pet = pet;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public LocalDate getDate() {
+        return date;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
-	public Pet getPet() {
-		return pet;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setPet(Pet pet) {
-		this.pet = pet;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
 
 }

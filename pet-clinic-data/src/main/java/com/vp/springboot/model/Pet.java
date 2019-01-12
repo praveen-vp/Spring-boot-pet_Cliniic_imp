@@ -1,6 +1,8 @@
 package com.vp.springboot.model;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.vp.springboot.model.Owner;
 import com.vp.springboot.model.PetType;
@@ -24,6 +26,9 @@ public class Pet extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits = new HashSet<>();
 
     /**
      * @return the petType
@@ -75,4 +80,11 @@ public class Pet extends BaseEntity {
         this.name = name;
     }
 
+    public Set<Visit> getVisits() {
+        return visits;
+    }
+
+    public void setVisits(Set<Visit> visits) {
+        this.visits = visits;
+    }
 }
