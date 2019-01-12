@@ -1,8 +1,17 @@
 package com.vp.springboot.model;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
+/**
+ * praveen vp
+ */
+@MappedSuperclass
 public class Person extends BaseEntity {
 
+	@Column(name = "first_name")
 	private String firstName;
+	@Column(name = "last_name")
 	private String lastName;
 
 	/**
